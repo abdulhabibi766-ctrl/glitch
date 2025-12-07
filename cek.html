@@ -1,0 +1,64 @@
+<h1<!DOCTYPE html>
+<html>
+<head>
+<title>Game Tebak Angka</title>
+<style>
+    body {
+        font-family: Arial;
+        background: #111;
+        color: white;
+        text-align: center;
+        padding-top: 40px;
+    }
+    #box {
+        margin: auto;
+        width: 300px;
+        padding: 20px;
+        border-radius: 15px;
+        background: #222;
+        box-shadow: 0 0 15px #0f0;
+    }
+    button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+        background: #0f0;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<h2>🎮 Game Tebak Angka!</h2>
+<div id="box">
+    <p>Masukkan angka 1 - 10</p>
+
+    <input id="tebakan" type="number" min= max="10" style="padding: 8px; width: 80px;">
+    <br>
+
+    <button onclick="tebak()">TEBAK</button>
+
+    <p id="hasil" style="font-size: 20px; margin-top: 20px;"></p>
+</div>
+
+<script>
+let jawaban = Math.floor(Math.random() * 10) + 1;
+
+function tebak() {
+    let input = document.getElementById("tebakan").value;
+    let hasil = document.getElementById("hasil");
+
+    if (input == jawaban) {
+        hasil.innerHTML = "🔥 Benar! Kamu jenius!";
+        hasil.style.color = "#0f0";
+    } else {
+        hasil.innerHTML = "❌ bul+ input;
+        hasil.style.color = "red";
+    }
+}
+</script>
+
+</body>
+</html></h1>
